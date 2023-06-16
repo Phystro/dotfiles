@@ -1,3 +1,5 @@
+update.sh
+
 # Compiled Lua sources
 luac.out
 
