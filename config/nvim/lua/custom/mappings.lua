@@ -19,10 +19,10 @@ M.transparent = {
 M.tmux = {
     n = {
         -- Move to window using the <ctrl> hjkl keys
-        ["<C-h>"] = { ":TmuxNavigateLeft<CR>", "Goto left window" },
-        ["<C-j>"] = { ":TmuxNavigateDown<CR>", "Goto lower window" },
-        ["<C-k>"] = { ":TmuxNavigateUp<CR>", "Goto upper window" },
-        ["<C-l>"] = { ":TmuxNavigateRight<CR>", "Goto right window" },
+        ["<C-h>"] = { ":TmuxNavigateLeft<CR>", "Goto left window pane" },
+        ["<C-j>"] = { ":TmuxNavigateDown<CR>", "Goto lower window pane" },
+        ["<C-k>"] = { ":TmuxNavigateUp<CR>", "Goto upper window pane" },
+        ["<C-l>"] = { ":TmuxNavigateRight<CR>", "Goto right window pane" },
     },
 }
 

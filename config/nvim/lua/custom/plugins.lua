@@ -87,7 +87,7 @@ local plugins = {
             -- save project session on closing project
             session = {
                 enabled = true,
-                file = ".git/Session.vim",
+                file = ".session.vim",
             },
             shada = {
                 enabled = false,
