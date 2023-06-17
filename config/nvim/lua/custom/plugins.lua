@@ -41,6 +41,16 @@ local plugins = {
         opts = {
             -- add any options here
         },
+        config = {
+            lsp = {
+                hover = {
+                    enabled = false,
+                },
+                signature = {
+                    enabled = false,
+                },
+            },
+        },
         dependencies = {
             -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
             "MunifTanjim/nui.nvim",
@@ -57,6 +67,56 @@ local plugins = {
             'nvim-lua/plenary.nvim',
             'stevearc/dressing.nvim', -- optional for vim.ui.select
         },
+    },
+    -- Project Manager
+    {
+        'charludo/projectmgr.nvim',
+        lazy = false, -- important!
+        opts = {
+            -- git repository sync when opening project
+            autogit = {
+                enabled = false,
+                -- fast forward sync of repo, downloading only those files without
+                -- conflicts and can be updated without intervention on my part.
+                -- Result of command is directed to the file .git/fastforward.log
+                -- to prevent it from being displayed on the terminal where neovim
+                -- is also running and to have a sync history available.
+                command = "git pull --ff-only >> .git/fastforward.log 2>&1",
+            },
+            reopen = false,
+            -- save project session on closing project
+            session = {
+                enabled = true,
+                file = ".git/Session.vim",
+            },
+            shada = {
+                enabled = false,
+                file = "main.shada",
+            },
+            scripts = {
+                enabled = true,
+                file_startup = "startup.sh",
+                file_shutdown = "shutdown.sh",
+            },
+        },
+    },
+    {
+        'christoomey/vim-tmux-navigator',
+        lazy = false,
+    },
+
+    {
+        "kdheepak/lazygit.nvim",
+        -- optional for floating window border decoration
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
+        opts = function ()
+            return require("lazygit")
+        end,
+        config = function ()
+            require("telescope").load_extension("lazygit")
+        end,
     },
 }
 

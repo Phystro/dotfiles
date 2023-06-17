@@ -15,6 +15,18 @@ M.transparent = {
 }
 
 
+-- TMUX
+M.tmux = {
+    n = {
+        -- Move to window using the <ctrl> hjkl keys
+        ["<C-h>"] = { ":TmuxNavigateLeft<CR>", "Goto left window" },
+        ["<C-j>"] = { ":TmuxNavigateDown<CR>", "Goto lower window" },
+        ["<C-k>"] = { ":TmuxNavigateUp<CR>", "Goto upper window" },
+        ["<C-l>"] = { ":TmuxNavigateRight<CR>", "Goto right window" },
+    },
+}
+
+
 -- Movement
 M.movement = {
     n = {
@@ -33,10 +45,10 @@ M.movement = {
 M.windows = {
     n = {
         -- Move to window using the <ctrl> hjkl keys
-        ["<C-h>"] = { "<C-w>h", "Goto left window" },
-        ["<C-j>"] = { "<C-w>j", "Goto lower window" },
-        ["<C-k>"] = { "<C-w>k", "Goto upper window" },
-        ["<C-l>"] = { "<C-w>l", "Goto right window" },
+        -- ["<C-h>"] = { "<C-w>h", "Goto left window" },
+        -- ["<C-j>"] = { "<C-w>j", "Goto lower window" },
+        -- ["<C-k>"] = { "<C-w>k", "Goto upper window" },
+        -- ["<C-l>"] = { "<C-w>l", "Goto right window" },
 
         -- Resize window using <ctrl> arrow keys
         ["<C-Up>"] = { ":resize +2<CR>", "Increase window height" },
@@ -49,6 +61,13 @@ M.windows = {
         ["<leader>ws"] = { "<C-W>s", "Split window horizontal" },
         ["<leader>wv"] = { "<C-W>v", "Split window vertical" },
         ["<leader>wx"] = { "<C-W>c", "Close window" },
+    },
+}
+
+-- Project
+M.project = {
+    n = {
+        ["<leader>pp"] = { ":ProjectMgr<CR>", "Toggle Project Manager Window" },
     },
 }
 

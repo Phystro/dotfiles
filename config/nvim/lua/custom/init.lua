@@ -13,6 +13,7 @@ opt.smartindent = true
 
 opt.hlsearch = false
 opt.incsearch = true
+
 -- Allow syntax highlighting
 opt.syntax = "ON"
 opt.termguicolors = true
