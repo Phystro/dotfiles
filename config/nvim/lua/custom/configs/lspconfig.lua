@@ -7,7 +7,7 @@ local servers = {
     "cssls",
     "csharp_ls",
     "clangd",
-    "dartls",
+    -- "dartls",
     "gdscript",
     "jsonls",
     "rust_analyzer",

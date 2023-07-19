@@ -27,6 +27,15 @@ M.tmux = {
 }
 
 
+-- General
+M.general = {
+    n = {
+        -- searching, search and replace within buffer
+        ["<leader>ss"] = { ":%s///g", "Search and Replace in buffer" },
+    },
+}
+
+
 -- Movement
 M.movement = {
     n = {
